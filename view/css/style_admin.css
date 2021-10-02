@@ -1,5 +1,6 @@
 .content{
     height: 85vh;
+    color: rgb(0, 0, 0);
 }
 
 .form{
@@ -7,6 +8,12 @@
     border-radius: 10px;
     border-color: black;
     border-style: solid;
+}
+
+.tabela{
+    background-color: #ffffff;
+    border-radius: 10px;
+    background-color: rgb(241, 196, 47);
 }
 
 label{
