@@ -1,0 +1,39 @@
+.header{
+    color: white;
+    background-color: rgb(220,53, 69);
+    text-align: center;
+    color: white;
+    font-size: 70px;
+}
+
+.logo{
+    font-family: 'PaloAlto';
+}
+
+.carousel-item{
+    height: 30rem;
+    color: white;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.container-car{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 50px;
+    padding-bottom: 50px;
+}
+
+.content{
+    height: 80vh;
+}
+
+.footer{
+    background-color: rgb(231, 230, 229);;
+    height: 10vh;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
