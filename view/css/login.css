@@ -1,0 +1,14 @@
+.form-login {
+width: 50%;
+margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+.form-login button{
+    background-color: rgb(220,53, 69);
+}
+

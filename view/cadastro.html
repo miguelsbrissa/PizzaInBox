@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de usuário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row header mb-3">
+            <nav class="navbar navbar-expand-lg navbar navbar-dark bg-danger"
+                style="background-color: rgb(233, 137, 47) ;">
+                <a class="navbar-brand" href="./index.html">PIZZA IN BOX</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/view/admin.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Menu
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./cad_pizza.html">Cadastro de pizza</a></li>
+                                <li><a class="dropdown-item" href="./cons_pizza.html">Consulta de Pizzas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row content">
+            <div class="col-sm-1 col-md-1 col-lg-1"></div>
+            <div class="col-sm-10 col-md-10 col-lg-10 form">
+                <h2>Dados básicos</h2>
+                <div class="row mb-3">
+
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                        <label for="inputNome" class="form-label">Nome</label>
+                        <input name="txtNome" type="text" class="form-control" placeholder="Digite o seu nome">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-4 col-md-8 col-lg-8">
+                        <label for="inputemail" class="form-label">e-mail</label>
+                        <input name="txtDesc" class="form-control" placeholder="Digite o seu e-mail"></textarea>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                        <label for="inputNome" class="form-label">CPF</label>
+                        <input name="txtNome" type="text" class="form-control"
+                            placeholder="Digite o CPF sem pontos e traços.">
+                    </div>
+                </div>
+                <h2>Endereço</h2>
+                <div class="row mb-3">
+
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                        <br>
+                        <label for="inputNome" class="form-label">Logradouro</label>
+                        <input name="txtNome" type="text" class="form-control" placeholder="Digite o seu logradouro"
+                            aria-label="Digite o nome da pizza">
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <br>
+                        <label for="inputPreco" class="form-label">Número</label>
+                        <input name="txtPreco" type="text" class="form-control"
+                            placeholder="Digite o número da sua casa ou apartamento." aria-label="Digite o preço">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                        <label for="inputNome" class="form-label">Complemento</label>
+                        <input name="txtNome" type="text" class="form-control"
+                            placeholder="Digite o seu complemento(opcional).">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                        <label for="inputNome" class="form-label">Bairro</label>
+                        <input name="txtNome" type="text" class="form-control" placeholder="Digite o seu bairro.">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormEstado">Estado</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option selected>SP</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormEstado">Cidade</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option selected>Salto</option>
+                        <option>Itu</option>
+                        <option>Indaituba</option>
+                        <option>Campinas</option>
+                    </select>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                        <label for="inputNome" class="form-label">CEP</label>
+                        <input name="txtNome" type="text" class="form-control" placeholder="Digite o CEP sem traços.">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="d-grid gap-2">
+            <button name="btnEnviar" type="button" class="btn btn-success btn-lg"
+                onclick="cadLogin()">Cadastrar</button>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="footer">
+        Rua: Jose da Silva, Numero:52
+    </div>
+</body>
+
+</html>
