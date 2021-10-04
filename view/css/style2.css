@@ -26,8 +26,8 @@
     padding-bottom: 50px;
 }
 
-.content{
-    height: 80vh;
+.carrosel{
+    margin-bottom: 20px;;
 }
 
 .footer{
@@ -36,4 +36,17 @@
     color: black;
     text-align: center;
     padding-top: 20px;
+}
+
+.cardapio{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card{
+    background-color: #777;
+    height: 20vh;
+    color: white;
+    background-position: center;
+    background-size: cover;
 }
