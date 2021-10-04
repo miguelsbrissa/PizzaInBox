@@ -48,72 +48,75 @@
       <div class="col-sm-1 col-md-1 col-lg-1"></div>
       <div class="col-sm-10 col-md-10 col-lg-10 tabela">
         <br>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <input type="text" class="form-control" id="input-produto" placeholder="Pesquisar produto">
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <button type="submit" class="btn btn-primary">Pesquisar</button>
+            </div>
+          </div>
+          <h1>Pizzas</h1>
 
-        <form>
-          <div class="form-group">
-            <input type="text" class="form-control" id="input-produto" placeholder="Pesquisar produto">
-            <button type="submit" class="btn btn-primary">Pesquisar</button>
-        </form>
-        <h1>Pizzas</h1>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">ID do produto</th>
+                <th scope="col">Nome do Produto</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Preço</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>4 Queijos</td>
+                <td>Molho de tomate, exclusiva mussarela Pizza Hut, provolone, parmesão e cream cheese.</td>
+                <td>R$ 35,00</td>
+                <td><button><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+                <td><button><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Corn & Bacon</td>
+                <td>Molho de tomate, mussarela, fatias de bacon e milho selecionado.</td>
+                <td>R$ 45,00</td>
+                <td><button><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+                <td><button><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Catuperoni</td>
+                <td>Mussarela, pepperoni, requeijão, oregano e parmesão ralado.</td>
+                <td>R$ 41,50</td>
+                <td><button><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+                <td><button><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Pepperrock</td>
+                <td>Mussarela, pepperoni, azeitona preta, parmesão ralado, oregano, Cream Cheese e alho granulado.</td>
+                <td>R$ 65,70</td>
+                <td><button><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+                <td><button><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Pão de alho</td>
+                <td>Mussarela, oregano, pasta de pão de alho, pão e parmesão.</td>
+                <td>R$ 53,10</td>
+                <td><button><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+                <td><button><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col">ID do produto</th>
-              <th scope="col">Nome do Produto</th>
-              <th scope="col">Descrição</th>
-              <th scope="col">Preço</th>
-              <th scope="col"></th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>4 Queijos</td>
-              <td>Molho de tomate, exclusiva mussarela Pizza Hut, provolone, parmesão e cream cheese.</td>
-              <td>R$ 35,00</td>
-              <td><button><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
-              <td><button><i class="fa fa-trash" aria-hidden="true"></i></button></td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Corn & Bacon</td>
-              <td>Molho de tomate, mussarela, fatias de bacon e milho selecionado.</td>
-              <td>R$ 45,00</td>
-              <td><button><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
-              <td><button><i class="fa fa-trash" aria-hidden="true"></i></button></td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Catuperoni</td>
-              <td>Mussarela, pepperoni, requeijão, oregano e parmesão ralado.</td>
-              <td>R$ 41,50</td>
-              <td><button><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
-              <td><button><i class="fa fa-trash" aria-hidden="true"></i></button></td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>Pepperrock</td>
-              <td>Mussarela, pepperoni, azeitona preta, parmesão ralado, oregano, Cream Cheese e alho granulado.</td>
-              <td>R$ 65,70</td>
-              <td><button><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
-              <td><button><i class="fa fa-trash" aria-hidden="true"></i></button></td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-              <td>Pão de alho</td>
-              <td>Mussarela, oregano, pasta de pão de alho, pão e parmesão.</td>
-              <td>R$ 53,10</td>
-              <td><button><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
-              <td><button><i class="fa fa-trash" aria-hidden="true"></i></button></td>
-            </tr>
-          </tbody>
-        </table>
       </div>
-
     </div>
-  </div>
 </body>
 
 </html>
