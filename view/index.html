@@ -79,37 +79,9 @@
         <h1> Conheça nosso cardapio </h1>
         <div id="app" v-cloak  class="row cardapio">
             <linha-card/>
- 
+            
         </div>
-        <div class="row cardapio">
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="card" style="background-image: linear-gradient(to left, rgba(0,0,0,0.4) 20%, rgba(0,0,0, 0.6) 86%, rgba(0,0,0,0.8) 100%),  url(./img/card4.jpg);">
-                    <div class="card-body">
-                        <h5 class="card-title">Pizza 4</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="card" style="background-image: linear-gradient(to left, rgba(0,0,0,0.4) 20%, rgba(0,0,0, 0.6) 86%, rgba(0,0,0,0.8) 100%), url(./img/card5.jpg);">
-                    <div class="card-body">
-                        <h5 class="card-title">Pizza 5</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="card" style="background-image: linear-gradient(to left, rgba(0,0,0,0.4) 20%, rgba(0,0,0, 0.6) 86%, rgba(0,0,0,0.8) 100%), url(./img/card6.jpg);">
-                    <div class="card-body">
-                        <h5 class="card-title">Pizza 6</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <script src="https://unpkg.com/vue@next"></script>
 
         <script>
@@ -140,7 +112,19 @@
                            {
                             nome: 'Carne',
                             id:  '3'
-                           }
+                           },
+                           {
+                            nome: 'Queijo',
+                            id:  '4'
+                           },
+                           {
+                            nome: 'Queijo',
+                            id:  '5'
+                           },
+                           {
+                            nome: 'Queijo',
+                            id:  '6'
+                           },
                        ]
                     }
                 },
@@ -149,7 +133,7 @@
                 props:['nome', 'id'],
                 template:`
                 <div class="col-sm-4 col-md-4 col-lg-4">
-                    <div class="card" v-bind:style="{background-image: 'linear-gradient(to left, rgba(0,0,0,0.4) 20%, rgba(0,0,0, 0.6) 86%, rgba(0,0,0,0.8) 100%)', 'url('./img/card+id+.jpg')'}">
+                    <div class="card" v-bind:style="{backgroundImage:  'linear-gradient(to left, rgba(0,0,0,0.4) 20%, rgba(0,0,0, 0.6) 86%, rgba(0,0,0,0.8) 100%), url(./img/card'+id+'.jpg)', marginBottom:'10px'}">
                         <div class="card-body">
                             <h5 class="card-title">Pizza de {{ nome }} </h5>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
