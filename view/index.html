@@ -78,6 +78,7 @@
         </div>
         <h1> Conheça nosso cardapio </h1>
         <div id="app" v-cloak  class="row cardapio">
+            <!--Chamando componente Vue-->
             <linha-card/>
             
         </div>
@@ -102,27 +103,27 @@
                     return{
                        pizzas:[
                            {
-                            nome: 'Calabresa',
+                            nome: 'Pizza de bacon',
                             id:  '1'
                            },
                            {
-                            nome: 'Queijo',
+                            nome: 'Pizza de calabresa',
                             id:  '2'
                            },
                            {
-                            nome: 'Carne',
+                            nome: 'Pizza Capricciosa',
                             id:  '3'
                            },
                            {
-                            nome: 'Queijo',
+                            nome: 'Pizza Marguerita',
                             id:  '4'
                            },
                            {
-                            nome: 'Queijo',
+                            nome: 'Pizza Romeu e Julieta',
                             id:  '5'
                            },
                            {
-                            nome: 'Queijo',
+                            nome: 'Pizza de frango',
                             id:  '6'
                            },
                        ]
@@ -135,8 +136,8 @@
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="card" v-bind:style="{backgroundImage:  'linear-gradient(to left, rgba(0,0,0,0.4) 20%, rgba(0,0,0, 0.6) 86%, rgba(0,0,0,0.8) 100%), url(./img/card'+id+'.jpg)', marginBottom:'10px'}">
                         <div class="card-body">
-                            <h5 class="card-title">Pizza de {{ nome }} </h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            <h5 class="card-title">{{ nome }}</h5>
+                            <p class="card-text">
                             </p>
                         </div>
                     </div>
