@@ -9,7 +9,7 @@
        private $ativo;
        private $senha;
        // construtor 1
-       function __construct($pn, $pe, $pi, $pa, $ps, $pc=null) {
+       public function __construct($pn, $pe, $pi, $pa, $ps, $pc=null) {
             $this->codigo = $pc;
             $this->nome =$pn;
             $this->endereco = $pe;

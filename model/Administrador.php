@@ -8,12 +8,12 @@ class Administrador {
     private $cpf;
     private $login;
 
-    function __construct($id, $nome, $email, $cpf, $login) {
+    function __construct($id, $nome, $email, $cpf, $usuario, $senha) {
         $this->id = $id;
         $this->nome = $nome;
         $this->email = $email;
         $this->cpf = $cpf;
-        $this->login = $login;
+        $this->login = new Login($id, $usuario, $senha);
     }
 
     public function getId() {

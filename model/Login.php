@@ -5,7 +5,8 @@ class Login {
     private $usuario;
     private $senha;
 
-    function __construct($id, $usuario, $senha) {
+
+    public function __construct($id, $usuario, $senha) {
         $this->id = $id;
         $this->usuario = $usuario;
         $this->senha = $senha;
