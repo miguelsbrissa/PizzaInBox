@@ -1,6 +1,4 @@
 <?php
-
-
    class Cliente {
        
        // atributos
@@ -10,10 +8,8 @@
        private $idade;
        private $ativo;
        private $senha;
-
-
        // construtor 1
-       public function Cliente($pn, $pe, $pi, $pa, $ps, $pc=null) {
+       function __construct($pn, $pe, $pi, $pa, $ps, $pc=null) {
             $this->codigo = $pc;
             $this->nome =$pn;
             $this->endereco = $pe;
@@ -22,7 +18,6 @@
             $this->senha = $ps;
                  
        }
-
 
        public function getCodigo() {
            return $this->codigo;
@@ -71,13 +66,4 @@
          public function setSenha($ps) {
             $this->senha = $ps;
         }
-
-
-  
-
-
-
-
    }
-
-?>
