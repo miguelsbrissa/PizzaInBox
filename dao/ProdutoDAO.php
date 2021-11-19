@@ -1,21 +1,21 @@
 <?php
 
     require_once 'conexao.php';
-    require_once 'Cliente.php';
+    require_once 'Produto.php';
 
 
-    class ClienteDAO {
+    class ProdutoDAO {
 
         private $cli;
 
-        public function ClienteDAO($ocli) {
+        public function ProdutoDAO($ocli) {
 
             $this->cli = $ocli;
 
         }
 
-        // Método responsáve por inserir registro na tabela Cliente
-        public function insCliente() {
+        // Método responsáve por inserir registro na tabela Produto
+        public function insProduto() {
 
             $db = new Conexao();
 
@@ -23,14 +23,14 @@
                 $con = $db->getConexao();
 
                 $sql = <<<HTML
-                    INSERT INTO CLIENTE(NOME, ENDERECO, SENHA, IDADE, ATIVO) VALUES (?,?,?,?,?)
+                    INSERT INTO Produto(NOME, DESCRICAO, PRECO) VALUES (?,?,?)
 HTML;
 
                 $stm = $con->prepare($sql);
 
                 $con->beginTransaction();
 
-                $stm->execute([$this->cli->getNome(), $this->cli->getEndereco(), $this->cli->getSenha(), $this->cli->getIdade(), $this->cli->getAtivo() ]);
+                $stm->execute([ $this->cli->getNome(), $this->cli->getDescricao(), $this->cli->getPreco() ]);
 
                 $con->commit();
 
@@ -41,8 +41,8 @@ HTML;
 
         }
 
-        // Método responsável por atualizar registro na tabela Cliente
-        public function atuCliente() {
+        // Método responsável por atualizar registro na tabela Produto
+        public function atuProduto() {
 
                 $db = new Conexao();
     
@@ -50,15 +50,15 @@ HTML;
                     $con = $db->getConexao();
 
                     $sql = <<<HTML
-                    UPDATE CLIENTE SET NOME=?, ENDERECO=?, SENHA=?, IDADE=?, ATIVO=? 
-                    WHERE COD_CLIENTE=?
+                    UPDATE Produto SET NOME=?, DESCRICAO=?, PRECO=?
+                    WHERE COD_Produto=?
 HTML;
 
                     $stm = $con->prepare($sql);
 
                     $con->beginTransaction();
 
-                    $stm->execute([$this->cli->getNome(), $this->cli->getEndereco(), $this->cli->getSenha(), $this->cli->getIdade(), $this->cli->getAtivo(), $this->cli->getId() ]);
+                    $stm->execute([$this->cli->getNome(), $this->cli->getDescricao(), $this->cli->getPreco(), $this->cli->getId() ]);
 
                     $con->commit();
 
@@ -68,16 +68,16 @@ HTML;
                 }
         }
 
-        // Método responsável por excluir registro na tabela Cliente
-        public function excCliente() {
+        // Método responsável por excluir registro na tabela Produto
+        public function excProduto() {
             $db = new Conexao();
     
             try {
                 $con = $db->getConexao();
 
                 $sql = <<<HTML
-                DELETE FROM CLIENTE
-                WHERE COD_CLIENTE=?
+                DELETE FROM Produto
+                WHERE COD_Produto=?
 HTML;
 
                 $stm = $con->prepare($sql);
