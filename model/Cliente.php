@@ -1,20 +1,16 @@
 <?php
-
-
    class Cliente {
        
        // atributos
-       private $codigo = null;
+       private $Id = null;
        private $nome;
        private $endereco;
        private $idade;
        private $ativo;
        private $senha;
-
-
        // construtor 1
-       public function Cliente($pn, $pe, $pi, $pa, $ps, $pc=null) {
-            $this->codigo = $pc;
+       public function __construct($pn, $pe, $pi, $pa, $ps, $pc=null) {
+            $this->Id = $pc;
             $this->nome =$pn;
             $this->endereco = $pe;
             $this->idade = $pi;
@@ -23,9 +19,8 @@
                  
        }
 
-
-       public function getCodigo() {
-           return $this->codigo;
+       public function getId() {
+           return $this->Id;
        }
 
        public function getEndereco() {
@@ -48,8 +43,8 @@
         return $this->senha;
        }
 
-       public function setCodigo($pc) {
-        $this->codigo =$pc;
+       public function setId($pc) {
+        $this->Id =$pc;
        }
 
        public function setEndereco($pe) {
@@ -71,13 +66,4 @@
          public function setSenha($ps) {
             $this->senha = $ps;
         }
-
-
-  
-
-
-
-
    }
-
-?>

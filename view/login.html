@@ -2,77 +2,54 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/view/css/login.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sass/main.css">
+  <title>PizzaInBox - Login</title>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row header mb-3">
-            <nav class="navbar navbar-expand-lg navbar navbar-dark bg-danger">
-                <a class="navbar-brand" href="./index.html">PIZZA IN BOX</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Menu
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="./cad_pizza.html">Cadastro de pizza</a></li>
-                                <li><a class="dropdown-item" href="./cons_pizza.html">Consulta de Pizzas</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+  <header>
+   
+  </header>
+  <main>
+    <section class="login">
+      <h2>Login</h2>
+
+      <div class="login__form">
+        <div class="login__input-box">
+            <span class="details">Usuario</span>
+            <input type="text" name="" id="" placeholder="user">
+        </div>
+        <div class="login__input-box">
+            <span class="details">Senha</span>
+            <input type="password" name="" id=""placeholder="*******">
         </div>
 
-        <div class="form-login row content mb-3">
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Endereço de email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Seu email">
-                    <small id="emailHelp" class="form-text text-muted">Nunca vamos
-                        compartilhar seu email, com ninguém.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Lembrar</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Entrar</button>
-            </form>
-
+        <div class="login__btn">
+            <input type="submit" value="Entrar">
         </div>
-    </div>
+      </div>
+
+      <div class="social-icons">
+        <a href="#!">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a href="#!">
+          <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="#!">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+      </div>
+      <footer>&copy; Copyright 2021</footer>
+    </section>
+  </main>
 
 
-
-
-
+  <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
