@@ -7,10 +7,10 @@ assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Descreva o bug**
+Uma descrição clara e concisa do que é o bug. 
 
-**Para reporudizr**
+**Para reproduzir**
 Passos para reproduzir o comportamento:
 1. Vá para '...'
 2. Clique em '....'
@@ -21,18 +21,18 @@ Passos para reproduzir o comportamento:
 A clear and concise description of what you expected to happen.
 
 **Screenshots**
-If applicable, add screenshots to help explain your problem.
+Se aplicável, adicione algumas screenshots para ajudar a explicar seu problema. 
 
-**Desktop (please complete the following information):**
+**Desktop (Não obrigatório):**
  - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+ - Navegador [e.g. chrome, safari]
+ - Versão [e.g. 22]
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
+**Smartphone (Se aplicável):**
+ - Dispositivo: [e.g. iPhone6]
  - OS: [e.g. iOS8.1]
  - Browser [e.g. stock browser, safari]
  - Version [e.g. 22]
 
-**Additional context**
-Add any other context about the problem here.
+**Contexto adicional(Não obrigatório)**
+Adicione qualquer outro contexto sobre o problema aqui. 
