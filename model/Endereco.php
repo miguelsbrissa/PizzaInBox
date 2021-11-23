@@ -12,7 +12,7 @@ class Endereco {
         $this->complemento = $complemento;
         $this->cep = $cep;
     }
-    
+
 
     public function getId() {
         return $this->id;
@@ -38,5 +38,10 @@ class Endereco {
     }
     public function setCep($cep) {
         $this->cep = $cep;
+    }
+
+    public function toString() {
+        return "id: " . $this->getId() . "; numero: "  .  $this->getNumero() .
+            "; complemento: " . $this->getComplemento() . "; cep: " . $this->getCep();
     }
 }

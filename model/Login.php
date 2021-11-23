@@ -5,7 +5,6 @@ class Login {
     private $usuario;
     private $senha;
 
-
     public function __construct($id, $usuario, $senha) {
         $this->id = $id;
         $this->usuario = $usuario;
@@ -15,20 +14,24 @@ class Login {
     public function getId() {
         return $this->id;
     }
-
-    public function getusuario() {
+    public function getUsuario() {
         return $this->usuario;
     }
-    public function getsenha() {
+    public function getSenha() {
         return $this->senha;
     }
     public function setId($id) {
         $this->id = $id;
     }
-    public function setsenha($senha) {
+    public function setSenha($senha) {
         $this->senha = $senha;
     }
-    public function setusuario($usuario) {
+    public function setUsuario($usuario) {
         $this->usuario = $usuario;
+    }
+
+    public function toString(){
+        return "id: " . $this->getId() . "; usuario: "  .  $this->getUsuario() . 
+        "; senha: " . $this->getSenha();
     }
 }
