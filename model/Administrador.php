@@ -61,6 +61,6 @@ class Administrador {
     public function toString(){
         return "id: " . $this->getId() . "; nome: "  . $this->getNome() . 
         "; email: " . $this->getEmail() . "; Cpf: " . $this->getCpf() 
-        . "; Login: [" . $this->getLogin()->toString() . "]; Endereco: [" . $this->getEndereco()->toString() . "]" ;
+        . "; Login: [" . $this->getLogin()->toString() . "]; Endereco: [" . $this->getEndereco()->toString() . "] \n" ;
     }
 }

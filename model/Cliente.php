@@ -1,69 +1,75 @@
 <?php
-   class Cliente {
-       
-       // atributos
-       private $Id = null;
-       private $nome;
-       private $endereco;
-       private $idade;
-       private $ativo;
-       private $senha;
-       // construtor 1
-       public function __construct($pn, $pe, $pi, $pa, $ps, $pc=null) {
-            $this->Id = $pc;
-            $this->nome =$pn;
-            $this->endereco = $pe;
-            $this->idade = $pi;
-            $this->ativo = $pa;
-            $this->senha = $ps;
-                 
-       }
+require_once "Login.php";
+require_once "Endereco.php";
+require_once "Telefone.php";
 
-       public function getId() {
-           return $this->Id;
-       }
+class Cliente {
+    private $id;
+    private $nome;
+    private $email;
+    private $cpf;
+    private Login $login;
+    private Endereco $endereco;
+    private Telefone $telefone;
 
-       public function getEndereco() {
-        return $this->endereco;
-       }
+    function __construct($id, $nome, $email, $cpf, Login $login, Endereco $endereco, Telefone $telefone) {
+        $this->id = $id;
+        $this->nome = $nome;
+        $this->email = $email;
+        $this->cpf = $cpf;
+        $this->login = $login;
+        $this->endereco = $endereco;
+        $this->telefone = $telefone;
+    }
 
-       public function getNome() {
+    public function getId() {
+        return $this->id;
+    }
+
+    public function getNome() {
         return $this->nome;
-       }
+    }
+    public function getEmail() {
+        return $this->email;
+    }
+    public function getCpf() {
+        return $this->cpf;
+    }
+    public function getLogin() {
+        return $this->login;
+    }
+    public function getEndereco() {
+        return $this->endereco;
+    }
+    public function getTelefone() {
+        return $this->telefone;
+    }
+    public function setId($id) {
+        $this->id = $id;
+    }
+    public function setNome($nome) {
+        $this->nome = $nome;
+    }
 
-       public function getIdade() {
-        return $this->idade;
-       }
+    public function setEmail($email) {
+        $this->email = $email;
+    }
 
-       public function getAtivo() {
-        return $this->ativo;
-       }
-
-       public function getSenha() {
-        return $this->senha;
-       }
-
-       public function setId($pc) {
-        $this->Id =$pc;
-       }
-
-       public function setEndereco($pe) {
-          $this->endereco = $pe;
-       }
-
-        public function setNome($pn) {
-            $this->nome =$pn;
-        }
-
-        public function setIdade($pi) {
-            $this->idade = $pi;
-        }
-
-        public function setAtivo($pa) {
-           $this->ativo = $pa;
-        }
-
-         public function setSenha($ps) {
-            $this->senha = $ps;
-        }
-   }
+    public function setCpf($cpf) {
+        $this->cpf = $cpf;
+    }
+    public function setLogin($login) {
+        $this->login = $login;
+    }
+    public function setEndereco($endereco) {
+        $this->endereco = $endereco;
+    }
+    public function setTelefone($telefone) {
+        $this->telefone = $telefone;
+    }
+    public function toString() {
+        return "id: " . $this->getId() . "; nome: "  . $this->getNome() .
+            "; email: " . $this->getEmail() . "; Cpf: " . $this->getCpf()
+            . "; Login: [" . $this->getLogin()->toString() . "]; Endereco: [" . $this->getEndereco()->toString() . "]" . "; Telefone: [" . $this->getTelefone()->toString() . "] \n";
+    }
+}
