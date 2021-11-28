@@ -1,0 +1,4 @@
+# vscode files
+.vscode/
+# astash files
+*.lock
