@@ -25,3 +25,11 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+function addPizza(){
+  location.href= "cadPizza.html"
+}
+
+function addPedido(){
+  location.href= "cadPedido.html"
+}
