@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/main.css">
+    <title>PizzaInBox - Realizar pedido</title>
+</head>
+
+<body>
+    <header>
+        <div class="menu-btn">
+            <span class="menu-btn__burger"></span>
+        </div>
+
+        <nav class="nav">
+            <ul class="menu-nav">
+                <li class="menu-nav__item active">
+                    <a href="index.html" class="menu-nav__link">
+                        Home
+                    </a>
+                </li>
+                <li class="menu-nav__item ">
+                    <a href="pedidos.html" class="menu-nav__link">
+                        Pedidos
+                    </a>
+                </li>
+                <li class="menu-nav__item">
+                    <a href="contact.html" class="menu-nav__link">
+                        Fale conosco
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="cadEndereco">
+
+            <h1 class="text-secondary">Endereco</h1>
+            <div class="cadEndereco__form">
+                <div class="cadEndereco__label">
+                    <span class="cadEndereco__details">Selecione o endereco</span>
+                </div>
+                <div class="cadEndereco__radio-group">
+                    <div class="cadEndereco__radio-item">
+                        <input type="radio" id="casa" name="endereco" value="casa">
+                        <label for="casa">Casa</label>
+                        <br>
+                        <span>
+                            Rua: Jose, 123; Bairro: Foda-se; Cidade: Itu
+                        </span>
+                    </div>
+                    <div class="cadEndereco__radio-item">
+                        <input type="radio" id="css" name="endereco" value="trabalho">
+                        <label for="trabalho">Trabalho</label>
+                        <br>
+                        <span>
+                            Rua: Joao, 123; Bairro: Caguei; Cidade: Sorocaba
+                        </span>
+                    </div>
+                </div>
+                <div class="cadEndereco__add">
+                    <a href="#!">
+                        <i class="fas fa-plus fa-2x"></i>
+                        Adicionar endereco
+                    </a>
+                </div>
+                
+
+                <div class="cadEndereco__button">
+                    <input type="submit" value="Escolher pagamento" onclick="addPagamento()">
+                </div>
+            </div>
+
+            <div class="social-icons">
+                <a href="#!">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="#!">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="#!">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+
+            </div>
+            <footer>&copy; Copyright 2021</footer>
+        </section>
+    </main>
+
+
+    <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

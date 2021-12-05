@@ -33,3 +33,11 @@ function addPizza(){
 function addPedido(){
   location.href= "cadPedido.html"
 }
+
+function addEndereco(){
+  location.href= "cadPedEndereco.html"
+}
+
+function addPagamento(){
+  location.href= "cadPedPagamento.html"
+}
