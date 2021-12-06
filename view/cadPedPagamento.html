@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li class="menu-nav__item ">
-                    <a href="pedidos.html" class="menu-nav__link">
+                    <a href="pedidosCli.html" class="menu-nav__link">
                         Pedidos
                     </a>
                 </li>
@@ -36,17 +36,33 @@
         </nav>
     </header>
     <main>
-        <section class="cadPedido">
+        <section class="cadPagamento">
            
             <h1 class="text-secondary">Cadastro de Pedidos</h1>
  
 
             <form action="#">
-                <div class="cadPedido__form">
-                    <div class="cadPedido__label">
-                        <span class="cadPedido__details">Selecione o método de pagamento</span>
+                <div class="cadPagamento__form">
+                    <div class="cadPagamento__label">
+                        <span class="cadPagamento__details">Selecione o método de pagamento</span>
                     </div>
                     
+                    <div class="cadPagamento__radio-group">
+                        <div class="cadPagamento__radio-item">
+                            <input type="radio" id="rdbBoleto" name="pagamento" value="boleto">
+                            <label for="boleto">Boleto/PIX</label>
+                        </div>
+                        <div class="cadPagamento__radio-item">
+                            <input type="radio" id="rdbCredito" name="pagamento" value="credito">
+                            <label for="credito">Carta de crédito</label>
+                        </div>
+                    </div>
+                    <div class="cadPagamento__boleto">
+                        
+                    </div>
+                    <div class="cadPagamento__credito">
+                        
+                    </div>
                     <div class="cadPedido__button">
                         <input type="submit" value="Finalizar Pedido">
                     </div>

@@ -1,7 +1,7 @@
 @import 'config', 'home','menu','contact',
 'responsive','cadPizza','cadUsuario','login',
 'conPizza','homeAdmin','pedidosCli','cadPedido',
-'cadPedEndereco';
+'cadPedEndereco', 'cadPedPagamento';
 
 body {
     background: $primary-color;
