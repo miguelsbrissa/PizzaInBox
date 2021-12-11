@@ -8,11 +8,13 @@ function httpGet(url) {
 function tablePizza() {
     const table = httpGet("https://pizza-in-box.herokuapp.com/produtos/");
     var linhas = table.split(",")
+    //console.log(table)
     linhas = JSON.parse(linhas)
-    console.log(linhas.content)
+    //console.log(linhas.content[0].nome)
 
     var btnAdd = document.createElement('div')
     btnAdd.setAttribute('class', 'homeAdmin__button')
+    btnAdd.setAttribute('id', 'btnAddPizza')
     btnAdd.innerHTML = `
     <input type="submit" value="Adicionar Pizza" onclick="addPizza()">
     `
@@ -37,21 +39,21 @@ function tablePizza() {
     tableHtml.appendChild(trH)
     container.appendChild(btnAdd)
     container.appendChild(tableHtml)
-    for (var i = 0; i < linhas.length; i++) {
+    for (var i = 0; i < linhas.content.length; i++) {
         var tr = document.createElement("tr")
         var id = document.createElement("td")
         var nome = document.createElement("td")
         var preco = document.createElement("td")
         var acoes = document.createElement("td")
 
-        tr.setAttribute('id', linhas[i].id)
+        tr.setAttribute('id', linhas.content[i].id)
         tr.setAttribute('class', "pedidos__content")
 
         id.innerHTML = i + 1
-        nome.innerHTML = linhas[i].nome
-        preco.innerHTML = `R$ ${linhas[i].preco}`
+        nome.innerHTML = linhas.content[i].nome
+        preco.innerHTML = `R$ ${linhas.content[i].preco}`
         acoes.innerHTML = `
-    <a href="#" class="pedidos__btn" onclick="editarPizza(${linhas[i].id})">
+    <a href="#" class="pedidos__btn" onclick="editarPizza(${linhas.content[i].id})">
     <i class="fas fa-eye"></i> Editar
 </a>
     `
@@ -66,7 +68,7 @@ function tablePizza() {
 tablePizza()
 
 function editarPizza(id){
-    var pizza = httpGet(`http://matheustir.ddns.net:8081/produtos/${id}`)
+    var pizza = httpGet(`https://pizza-in-box.herokuapp.com/produtos/${id}`)
     console.log(pizza)
 
     pizza = JSON.parse(pizza)
@@ -74,6 +76,8 @@ function editarPizza(id){
 
     var tabela = document.querySelector('#tablePizza')
     var div = document.querySelector('#containerPizza')
+    var btn = document.querySelector('#btnAddPizza')
+    btn.remove()
     tabela.remove()
     var divEdit = document.createElement('div')
     divEdit.setAttribute('class', 'cadPizza__form')
@@ -81,11 +85,11 @@ function editarPizza(id){
     divEdit.innerHTML = `
                     <div class="cadPizza__input-box">
                         <span class="details">Nome da Pizza</span>
-                        <input type="text" name="" id="" placeholder="Nome da pizza" value="${pizza.nome}">
+                        <input type="text" name="" id="nomePizza" placeholder="Nome da pizza" value="${pizza.nome}">
                     </div>
                     <div class="cadPizza__input-box">
                         <span class="details">Preço</span>
-                        <input type="text" name="" id="" placeholder="50,00" value = "${pizza.preco}">
+                        <input type="text" name="" id="precoPizza" placeholder="50,00" value = "${pizza.preco}">
                     </div>
                     <div class="cadPizza__btn">
                         <input type="submit" value="Atualizar" onclick = "edit(${id})">
@@ -108,12 +112,29 @@ function troca(){
 }
 
 function edit(pizza){
-    console.log(`Pizza de id ${pizza} atualizada`)
+    var nome = document.querySelector('#nomePizza')
+    var preco = document.querySelector('#precoPizza')
+    var html = new XMLHttpRequest();
+    html.open("put", `https://pizza-in-box.herokuapp.com/produtos/${pizza}`, true)
+    html.setRequestHeader('Content-Type', 'application/json')
+    html.send(JSON.stringify({
+        "id": pizza,
+        "nome": nome.value,
+        "preco": preco.value
+    }))
+    alert('Pizza atualizada com sucesso')
+    limpar()
 }
 
 function remove(pizza){
     console.log(`Pizza de id ${pizza} removida`)
 }
 
+function limpar(){
+    var nome = document.querySelector('#nomePizza')
+    var preco = document.querySelector('#precoPizza')
 
+    nome.value = ""
+    preco.value = ""
+}
 
