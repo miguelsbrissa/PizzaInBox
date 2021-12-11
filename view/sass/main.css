@@ -417,11 +417,17 @@
   background-color: #272727;
   border-radius: 5px;
   width: 50vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cadPizza__input-box {
   width: 100%;
   margin-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cadPizza__input-box input {
@@ -685,9 +691,6 @@
 
 .conPizza {
   padding-bottom: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -728,6 +731,7 @@
 
 .conPizza__table {
   margin-top: 20px;
+  width: 100%;
   text-align: center;
 }
 
@@ -737,6 +741,22 @@
 
 .conPizza__header {
   color: #cc4848;
+}
+
+.conPizza #containerPizza {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .conPizza__content:hover {
