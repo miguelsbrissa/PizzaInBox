@@ -1,11 +1,7 @@
-@import 'config';
-@import 'home';
-@import 'menu';
-@import 'contact';
-@import 'responsive';
-@import 'cadPizza';
-@import 'cadUsuario';
-@import 'login';
+@import 'config', 'home','menu','contact',
+'responsive','cadPizza','cadUsuario','login',
+'conPizza','homeAdmin','pedidosCli','cadPedido',
+'cadPedEndereco', 'cadPedPagamento';
 
 body {
     background: $primary-color;

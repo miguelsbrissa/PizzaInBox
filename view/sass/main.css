@@ -417,11 +417,17 @@
   background-color: #272727;
   border-radius: 5px;
   width: 50vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cadPizza__input-box {
   width: 100%;
   margin-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cadPizza__input-box input {
@@ -531,6 +537,15 @@
   font-size: 1rem;
 }
 
+.cadUsuario__input-box select {
+  width: 100%;
+  height: 40px;
+  padding: 0 1rem;
+  margin-top: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+}
+
 .cadUsuario__btn {
   height: 50px;
   width: 100%;
@@ -600,7 +615,7 @@
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   padding: 3rem;
   font-size: 1.5rem;
   background-color: #272727;
@@ -620,9 +635,23 @@
   font-size: 1rem;
 }
 
+.login__add {
+  font-size: 15px;
+}
+
+.login__add a {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.login__add a:hover {
+  color: #cc4848;
+}
+
 .login__btn {
   height: 50px;
   width: 100%;
+  margin-top: 1rem;
 }
 
 .login__btn input {
@@ -658,6 +687,710 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.conPizza {
+  padding-bottom: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.conPizza__bio-image {
+  height: 30vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/fundo.jpg") center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/fundo.jpg") center top;
+  background: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.conPizza__bio-image .text-secondary {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.conPizza__details {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.conPizza__table {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.conPizza__table td {
+  padding: 10px;
+}
+
+.conPizza__header {
+  color: #cc4848;
+}
+
+.conPizza #containerPizza {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.conPizza__content:hover {
+  background-color: rgba(204, 72, 72, 0.5);
+}
+
+.conPizza__btn {
+  color: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.conPizza__btn:hover {
+  color: #272727;
+}
+
+.conPizza .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.conPizza footer {
+  -webkit-transform: rotate(90deg) translate(-3rem, -5rem);
+          transform: rotate(90deg) translate(-3rem, -5rem);
+}
+
+.homeAdmin {
+  padding-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeAdmin__bio-image {
+  height: 30vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/fundo.jpg") center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/fundo.jpg") center top;
+  background: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.homeAdmin__bio-image .text-secondary {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.homeAdmin__details {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.homeAdmin__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80vw;
+}
+
+.homeAdmin__table {
+  width: 100%;
+  margin: 20px;
+  text-align: center;
+}
+
+.homeAdmin__table td {
+  padding: 10px;
+}
+
+.homeAdmin__header {
+  color: #cc4848;
+}
+
+.homeAdmin__content:hover {
+  background-color: rgba(204, 72, 72, 0.5);
+}
+
+.homeAdmin__btn {
+  color: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.homeAdmin__btn:hover {
+  color: #272727;
+}
+
+.homeAdmin__button {
+  height: 50px;
+  width: 100%;
+  margin: 10px;
+}
+
+.homeAdmin__button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #cc4848;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.homeAdmin .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.homeAdmin footer {
+  -webkit-transform: rotate(90deg) translate(-3rem, -5rem);
+          transform: rotate(90deg) translate(-3rem, -5rem);
+}
+
+.pedidos {
+  padding-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pedidos__bio-image {
+  height: 30vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/fundo.jpg") center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/fundo.jpg") center top;
+  background: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.pedidos__bio-image .text-secondary {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pedidos__details {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.pedidos__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80vw;
+}
+
+.pedidos__table {
+  width: 100%;
+  margin: 20px;
+  text-align: center;
+}
+
+.pedidos__table td {
+  padding: 10px;
+}
+
+.pedidos__header {
+  color: #cc4848;
+}
+
+.pedidos__content:hover {
+  background-color: rgba(204, 72, 72, 0.5);
+}
+
+.pedidos__btn {
+  color: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.pedidos__btn:hover {
+  color: #272727;
+}
+
+.pedidos__button {
+  height: 50px;
+  width: 100%;
+  margin: 10px;
+}
+
+.pedidos__button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #cc4848;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.pedidos .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pedidos footer {
+  -webkit-transform: rotate(90deg) translate(-3rem, -5rem);
+          transform: rotate(90deg) translate(-3rem, -5rem);
+}
+
+.cadPedido {
+  padding-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding-top: 20vh;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/fundo.jpg") center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/fundo.jpg") center top;
+  background-size: cover;
+}
+
+.cadPedido__details {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.cadPedido h1 {
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.cadPedido__form {
+  background-color: #272727;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 50vw;
+}
+
+.cadPedido__label {
+  text-align: center;
+}
+
+.cadPedido__table {
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  border: solid 2px #cc4848;
+}
+
+.cadPedido__table td {
+  padding: 15px 50px;
+}
+
+.cadPedido__header {
+  color: #cc4848;
+}
+
+.cadPedido__content {
+  padding: 10px;
+}
+
+.cadPedido__content:hover {
+  background-color: rgba(204, 72, 72, 0.5);
+}
+
+.cadPedido__btn {
+  color: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.cadPedido__btn:hover {
+  color: #272727;
+}
+
+.cadPedido__button {
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.cadPedido__button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #cc4848;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cadPedido__total {
+  border: 2px solid #cc4848;
+  padding: 10px;
+  text-align: center;
+}
+
+.cadPedido .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cadPedido footer {
+  -webkit-transform: rotate(90deg) translate(-3rem, -5rem);
+          transform: rotate(90deg) translate(-3rem, -5rem);
+}
+
+.cadEndereco {
+  padding-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding-top: 20vh;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/fundo.jpg") center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/fundo.jpg") center top;
+  background-size: cover;
+}
+
+.cadEndereco__details {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.cadEndereco h1 {
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.cadEndereco__form {
+  background-color: #272727;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 50vw;
+}
+
+.cadEndereco__radio-group {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cadEndereco__radio-item {
+  margin: 10px 0;
+  border: solid 2px white;
+  padding: 15px;
+}
+
+.cadEndereco__label {
+  text-align: center;
+}
+
+.cadEndereco__btn {
+  color: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.cadEndereco__btn:hover {
+  color: #272727;
+}
+
+.cadEndereco__button {
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.cadEndereco__button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #cc4848;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cadEndereco__add {
+  margin: 30px 0;
+}
+
+.cadEndereco__add a {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.cadEndereco__add a:hover {
+  color: #cc4848;
+}
+
+.cadEndereco .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cadEndereco footer {
+  -webkit-transform: rotate(90deg) translate(-3rem, -5rem);
+          transform: rotate(90deg) translate(-3rem, -5rem);
+}
+
+.cadPagamento {
+  padding-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding-top: 20vh;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/fundo.jpg") center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/fundo.jpg") center top;
+  background-size: cover;
+}
+
+.cadPagamento__details {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.cadPagamento h1 {
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.cadPagamento__form {
+  background-color: #272727;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 50vw;
+}
+
+.cadPagamento__radio-group {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+}
+
+.cadPagamento__radio-item {
+  margin: 10px;
+  border: solid 2px white;
+  padding: 15px;
+}
+
+.cadPagamento__input-box {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.cadPagamento__input-box input {
+  width: 100%;
+  height: 40px;
+  padding: 0 1rem;
+  margin-top: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+}
+
+.cadPagamento__input-box select {
+  width: 100%;
+  height: 40px;
+  padding: 0 1rem;
+  margin-top: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+}
+
+.cadPagamento__boleto {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.cadPagamento__label {
+  text-align: center;
+}
+
+.cadPagamento__button {
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.cadPagamento__button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #cc4848;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cadPagamento .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cadPagamento footer {
+  -webkit-transform: rotate(90deg) translate(-3rem, -5rem);
+          transform: rotate(90deg) translate(-3rem, -5rem);
 }
 
 body {

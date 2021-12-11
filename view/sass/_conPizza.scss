@@ -1,0 +1,75 @@
+.conPizza{
+    padding-bottom: 2rem;
+    flex-direction: column;
+    &__bio-image{
+        height: 30vh;
+        width: 100%;
+        background: 
+    linear-gradient(
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.3)
+    ),
+    url('../img/fundo.jpg') center top;
+    background: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    .text-secondary{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        }
+    }
+    &__details{
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+   &__table{
+       margin-top: 20px;
+       width: 100%;
+       text-align: center;
+       
+       td{
+           padding: 10px;
+       }
+       
+
+   }
+   &__header{
+       color: $secondary-color;
+   }
+
+   #containerPizza{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+
+   
+   &__content{
+    &:hover{
+        background-color: rgba($secondary-color, 0.5);
+    }
+    
+   }
+
+    &__btn{
+        color: set-text-color($primary-color);
+        @include transition-ease;
+
+        &:hover{
+            color: $primary-color;
+        }
+    }
+    .social-icons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer{
+        transform: rotate(90deg) translate(-3rem, -5rem);
+    }
+}
