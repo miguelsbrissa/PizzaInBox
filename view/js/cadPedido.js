@@ -81,7 +81,7 @@ function addEndereco() {
     <label for="casa">Casa</label>
     <br>
     <span>
-        Rua: Jose, 123; Bairro: Foda-se; Cidade: Itu
+        Rua: Florian Peixoto, 123; Bairro: Centro; Cidade: Itu
     </span>
     `
     divRdbGroup.appendChild(divRdbItem)
