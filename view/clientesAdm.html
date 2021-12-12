@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sass/main.css">
-    <title>PizzaInBox - Realizar pedido</title>
+    <title>PizzaInBox - Consultar Pizzas</title>
 </head>
 
 <body>
@@ -23,34 +23,31 @@
                     </a>
                 </li>
                 <li class="menu-nav__item ">
-                    <a href="pedidosCli.html" class="menu-nav__link">
+                    <a href="pedidosAdm.html" class="menu-nav__link">
                         Pedidos
                     </a>
                 </li>
-                <li class="menu-nav__item">
-                    <a href="contact.html" class="menu-nav__link">
-                        Fale conosco
+                <li class="menu-nav__item ">
+                    <a href="homeAdmin.html" class="menu-nav__link">
+                        Pizzas
+                    </a>
+                </li>
+                <li class="menu-nav__item ">
+                    <a href="clientesAdm.html" class="menu-nav__link">
+                        Clientes
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="cadPedido">
-
-            <h1 class="text-secondary">Cadastro de Pedidos</h1>
-
-
-
-            <div class="cadPedido__form" id="formPedido">
-                <div class="cadPedido__label">
-                    <span class="cadPedido__details" id="labelPedido">Selecione as pizzas desejadas</span>
-                </div>
-               
-                
-                
+        <section class="conPizza">
+            <div class="conPizza__bio-image">
+                <h1 class="text-secondary">Bem-vindo(a) Admin</h1>
             </div>
-
+            <div id="containerPizza">   
+            </div>
+            
             <div class="social-icons">
                 <a href="#!">
                     <i class="fab fa-twitter fa-2x"></i>
@@ -70,7 +67,7 @@
 
     <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/cadPedido.js"></script>
+    <script src="js/clientesAdm.js"></script>
 </body>
 
 </html>

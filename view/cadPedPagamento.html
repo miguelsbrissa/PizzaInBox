@@ -49,11 +49,11 @@
                     
                     <div class="cadPagamento__radio-group">
                         <div class="cadPagamento__radio-item">
-                            <input type="radio" id="rdbBoleto" name="pagamento" value="boleto">
+                            <input type="radio" id="rdbBoleto" name="pagamento" value="boleto" onclick="togglePagamento()">
                             <label for="boleto">Boleto/PIX</label>
                         </div>
                         <div class="cadPagamento__radio-item">
-                            <input type="radio" id="rdbCredito" name="pagamento" value="credito">
+                            <input type="radio" id="rdbCredito" name="pagamento" value="credito" onclick="togglePagamento()">
                             <label for="credito">Carta de crédito</label>
                         </div>
                     </div>
@@ -87,6 +87,7 @@
 
     <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/cadPedido.js"></script>
 </body>
 
 </html>
