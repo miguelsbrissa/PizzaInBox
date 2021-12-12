@@ -95,7 +95,7 @@ function editarPizza(id){
                     </div>
                     <div class="cadPizza__input-box">
                         <span class="details">Preço</span>
-                        <input type="text" name="" id="precoPizza" placeholder="50,00" value = "${pizza.preco}">
+                        <input type="text" name="" id="precoPizza" placeholder="50.00" value = "${pizza.preco}">
                     </div>
                     <div class="cadPizza__input-box">
                         <span class="details">Ingredientes</span>
