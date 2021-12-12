@@ -29,7 +29,6 @@ function toggleMenu() {
 }
 
 
-
 function addPizza() {
   location.href = "cadPizza.html"
 }
