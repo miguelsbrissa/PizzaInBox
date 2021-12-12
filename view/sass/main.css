@@ -498,7 +498,7 @@
 
 .cadUsuario {
   height: 100%;
-  padding-top: 10vh;
+  padding-top: 4vh;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -525,8 +525,8 @@
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-  padding: 3rem;
+  grid-gap: 15px;
+  padding: 2rem;
   font-size: 1.5rem;
   background-color: #272727;
   border-radius: 5px;
@@ -539,7 +539,7 @@
 
 .cadUsuario__input-box input {
   width: 100%;
-  height: 40px;
+  height: 35px;
   padding: 0 1rem;
   margin-top: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
