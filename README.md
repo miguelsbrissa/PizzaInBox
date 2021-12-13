@@ -13,8 +13,7 @@ Este projeto tem como objetivo criar um sistema de pizzaria WEB com o intuito de
 https://pizzainbox.netlify.app/
 
 ## Diagramas
-A fazer
-
+![image](https://user-images.githubusercontent.com/84507810/145814897-eab63b97-3338-4db0-8a99-cd70fc413e77.png)
 
 ## Manual do usuário
 A fazer
