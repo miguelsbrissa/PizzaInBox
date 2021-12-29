@@ -8,9 +8,7 @@ function httpGet(url) {
 function tableClientes() {
     const table = httpGet("https://pizza-in-box.herokuapp.com/clientes/");
     var linhas = table.split(",")
-    //console.log(table)
     linhas = JSON.parse(linhas)
-    //console.log(linhas.content[0])
 
     var container = document.querySelector('#containerPizza')
     var tableHtml = document.createElement("table")

@@ -6,7 +6,6 @@ function httpGet(url) {
 }
 
 function tablePedidos() {
-    //const table = httpGet("http://189.28.251.184:8081/pedidos/1");
     var linhas = table.split(",")
     linhas = JSON.parse(linhas)
     console.log(linhas)
@@ -21,7 +20,6 @@ function tablePedidos() {
     var preco = document.createElement("td")
     var acoes = document.createElement("td")
 
-    //tr.setAttribute('id', linhas[i].id)
     tr.setAttribute('class', "pedidos__content")
 
     id.innerHTML = i + 1

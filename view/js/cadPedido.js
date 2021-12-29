@@ -9,15 +9,13 @@ function tablePizzas() {
     var divF = document.querySelector('#formPedido')
     const table = httpGet("https://pizza-in-box.herokuapp.com/produtos/");
     var linhas = table.split(",")
-    //console.log(table)
     linhas = JSON.parse(linhas)
-    //console.log(linhas.content[0].nome)
 
     var tableHtml = document.createElement("table")
     tableHtml.setAttribute('class', 'cadPedido__table')
     tableHtml.setAttribute('id', 'tablePizza')
     divF.appendChild(tableHtml)
-    for (var i = 0; i < linhas.content.length; i++) {
+    for (let i of linhas.content.length) {
         var tr = document.createElement("tr")
         var nome = document.createElement("td")
         var preco = document.createElement("td")

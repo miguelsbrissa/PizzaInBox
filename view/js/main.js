@@ -1,4 +1,6 @@
-//menu
+/**
+ * Menu principal
+ */
 const menuBtn = document.querySelector('.menu-btn');
 const hamburger = document.querySelector('.menu-btn__burger');
 const nav = document.querySelector('.nav');
@@ -8,8 +10,9 @@ const navItems = document.querySelectorAll('.menu-nav__item');
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
-
-//funcoes
+/**
+ * Função que controla o menu principal.
+ */
 function toggleMenu() {
   if (!showMenu) {
     hamburger.classList.add('open');
