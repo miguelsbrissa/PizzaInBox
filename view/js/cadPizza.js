@@ -1,4 +1,3 @@
-
 function addPizza() {
     var nome = document.querySelector('#nomePizza')
     var preco = document.querySelector('#precoPizza')
@@ -11,12 +10,6 @@ function addPizza() {
         "preco": preco.value,
         "descricao":ing.value
     }))
-
-    // if (html.statusText){
-    //     alert('Pizza adicionada com sucesso!')
-    // }else{
-    //     alert('Erro de digitação!')
-    // }
     alert('Pizza adicionada com sucesso')
     limpar()
 }

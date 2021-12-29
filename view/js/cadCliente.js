@@ -32,9 +32,6 @@ function addCliente() {
         "statusPermissao": "CLIENTE",
         "telefones": [telefone.value]
     }))
-    
-    //tipo 0 CPF 1 CNPJ
-    //Status 0 Cli 1 Admin
 
     var cli = httpGet(`https://pizza-in-box.herokuapp.com/clientes/findByCpf?cpf=${cpf.value}`)
     console.log(cli)
