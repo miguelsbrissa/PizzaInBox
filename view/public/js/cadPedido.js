@@ -15,7 +15,7 @@ function tablePizzas() {
     tableHtml.setAttribute('class', 'cadPedido__table')
     tableHtml.setAttribute('id', 'tablePizza')
     divF.appendChild(tableHtml)
-    for (let i of linhas.content.length) {
+    for (const i of Object.keys(linhas.content)) {
         var tr = document.createElement("tr")
         var nome = document.createElement("td")
         var preco = document.createElement("td")
