@@ -1,0 +1,27 @@
+{
+  "name": "pizzainbox",
+  "version": "1.0.0",
+  "description": "Projeto referente ao desenvolvimento do frontend do Pizza in box, um serviço de pizzaria.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelsbrissa/PizzaInBox.git"
+  },
+  "author": "Miguel Sbrissa, Matheus Tirabassi, Vitor Urias e Erick Mayson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miguelsbrissa/PizzaInBox/issues"
+  },
+  "homepage": "https://github.com/miguelsbrissa/PizzaInBox#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "express": "4.16.3"
+  }
+}
