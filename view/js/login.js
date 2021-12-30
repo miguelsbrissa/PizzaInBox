@@ -1,14 +1,22 @@
-function httpGet(url) {
-    var html = new XMLHttpRequest();
-    html.open("get", url, false)
-    html.send(null)
-    return html.responseText;
-}
+export default {validateLogin}
+import axios from 'axios'
+
+const url = "https://pizza-in-box.herokuapp.com"
+const endpoint = "logins/passwordValidate"
 
 function validateLogin(){
-    var user = document.querySelector('#userLogin')
-    var pass = document.querySelector('#passLogin')
-    var bool = httpGet(`https://pizza-in-box.herokuapp.com/logins/passwordValidate?user=${user.value}&password=${pass.value}`)
+    let user = document.querySelector('#userLogin')
+    let pass = document.querySelector('#passLogin')
+    axios.get(`${url}/${endpoint}`, {
+        params: {
+            user: user.value,
+            password: pass.value
+    }}).then(response => redirectPage(response.data))
+    
+}
+
+function redirectPage(data) {
+    let bool = data
     console.log(bool)
     
     if(bool == "\"CLIENTE\""){

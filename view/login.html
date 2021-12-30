@@ -50,11 +50,12 @@
       <footer>&copy; Copyright 2021</footer>
     </section>
   </main>
-
-
   <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/login.js"></script>
+  <script type="module">
+    import validateLogin from '/js/login.js'
+    console.log(validateLogin.validateLogin)
+    window.validateLogin = validateLogin.validateLogin
+  </script>
 </body>
 
 </html>
