@@ -5,105 +5,27 @@ const endpointGetId = `${endpoint}/findByCpf`
 const endpointLogin = '/logins'
 class Cliente {
 	constructor(cpf, nome, email, telefone) {
-		;(this._cpf = cpf),
-			(this._nome = nome),
-			(this._email = email),
-			(this._telefone = telefone)
-	}
-	get cpf() {
-		return this._cpf
-	}
-	set cpf(cpf) {
-		this._cpf = cpf
-	}
-	get nome() {
-		return this._nome
-	}
-	set nome(nome) {
-		this._nome = nome
-	}
-	get email() {
-		return this._email
-	}
-	set email(email) {
-		this._email = email
-	}
-	get telefone() {
-		return this._telefone
-	}
-	set telefone(telefone) {
-		this._telefone = telefone
-	}
-	get endereco() {
-		return this._endereco
-	}
-	set endereco(endereco) {
-		this._endereco = endereco
+		;(this.cpf = cpf),
+			(this.nome = nome),
+			(this.email = email),
+			(this.telefone = telefone)
 	}
 }
 
 class Login {
-	constructor(usuario, senha) {
-		;(this._usuario = usuario), (this._senha = senha)
-	}
-	get usuario() {
-		return this._usuario
-	}
-	set usuario(usuario) {
-		this._usuario = usuario
-	}
-	get senha() {
-		return this._senha
-	}
-	set senha(senha) {
-		this._senha = senha
+	constructor(user, password) {
+		;(this.user = user), (this.password = password)
 	}
 }
 class Endereco {
 	constructor(cep, logradouro, numero, bairro, complemento, estado, cidade) {
-		;(this._logradouro = logradouro),
-			(this._numero = numero),
-			(this._bairro = bairro),
-			(this._complemento = complemento),
-			(this._estado = estado),
-			(this._cidade = cidade),
-			(this._cep = cep)
-	}
-	get logradouro() {
-		return this._logradouro
-	}
-	set logradouro(logradouro) {
-		this._logradouro = logradouro
-	}
-	get numero() {
-		return this._logradouro
-	}
-	set numero(numero) {
-		this._logradouro = numero
-	}
-	get bairro() {
-		return this._logradouro
-	}
-	set bairro(bairro) {
-		this._logradouro = bairro
-	}
-	get estado() {
-		return this._logradouro
-	}
-	set estado(estado) {
-		this._logradouro = estado
-	}
-	get cidade() {
-		return this._logradouro
-	}
-	set cidade(cidade) {
-		this._logradouro = cidade
-	}
-	get cep() {
-		return this._logradouro
-	}
-	set cep(cep) {
-		this._logradouro = cep
+		;(this.logradouro = logradouro),
+			(this.numero = numero),
+			(this.bairro = bairro),
+			(this.complemento = complemento),
+			(this.estado = estado),
+			(this.cidade = cidade),
+			(this.cep = cep)
 	}
 }
 const adicionaCliente = async function addCliente() {
@@ -139,22 +61,19 @@ const adicionaCliente = async function addCliente() {
 	cliente.endereco = endereco
 	cliente.login = login
 	let senhaConfirmada = document.getElementById('confSenhaCliente').value
-	if(cliente.cpf === null || login.senha === '') {
+	if(cliente.password === null || login.password === '') {
 		console.error('O cpf está em branco!')
 		alert('O cpf está em branco!\n')
 		return
 	}
-	if(login.senha === null || login.senha === ''){
+	if(login.password === null || login.password === ''){
 		console.error('A senha esta em branco!')
 		alert('A senha esta em branco!\n')
 		return
 	}
 
-	if (login.senha === senhaConfirmada) {
+	if (login.password === senhaConfirmada) {
 		const clienteResponse = await sendUser(cliente)
-		const clienteId = await getUserAccountById(cliente.cpf)
-		const addressResponse = await sendAdress(clienteId.id, endereco)
-		const loginResponse = await sendLogin(clienteId.id, login)
 	} else {
 		console.error(`Senha do usuário diferente!${login}`)
 		alert('Sua senha diverge da senha confirmada!')
@@ -170,81 +89,20 @@ const adicionaCliente = async function addCliente() {
 			tipo: 'PESSOAFISICA',
 			statusPermissao: 'CLIENTE',
 			telefones: [cliente.telefone],
+			enderecos: [cliente.endereco],
+			login: cliente.login
 		})
 		.then((response) => {
 			if (response.status >= 200 && response.status <= 400) {
 				console.info(`resposta usuario : `)
 				console.info(response)
+				alert('Cadastrado com sucesso!\n')
 			}
 		})
 		.catch((err) => {
 			console.error(`Erro no cadastro do usuário\n${err}`)
 		})
-}
-
-function getUserAccountById(cpf) {
-	 return api
-		.get(`${endpointGetId}`, {
-			params: {
-				cpf: cpf,
-			},
-		})
-		.then((response) => {
-			if (response.status >= 200 && response.status <= 400) {
-				console.info(`getUsarAccountById: `)
-				console.info(response)
-				return response.data
-			}
-		})
-		.catch((err) => {
-			console.error('Erro no getId' + err)
-		})
-}
-
- function sendAdress(clienteId, endereco) {
-	 api
-		.post(`${endpoint}/${clienteId}/enderecos`, {
-			logradouro: endereco.logradouro,
-			numero: endereco.numero,
-			complemento: endereco.complemento,
-			bairro: endereco.bairro,
-			cep: endereco.cep,
-			cidade: endereco.cidade,
-			estado: endereco.estado,
-		})
-		.then((response) => {
-			if (response.status >= 200 && response.status <= 400) {
-				console.log(`respota:`)
-				console.log(response)
-			}
-		})
-		.catch((err) => {
-			console.error('Erro no cadastro de endereço\n' + err)
-			throw err
-		})
-}
-
- function sendLogin(clienteId, login) {
-	 api
-		.post(endpointLogin, {
-			user: login.usuario,
-			password: login.senha,
-			statusPermissao: 'CLIENTE',
-			clienteId: clienteId,
-		})
-		.then((response) => {
-			if (response.status >= 200 && response.status <= 400) {
-				console.info(`resposta login:`)
-				console.log(response)
-				alert('Cadastro concluído😎😎😎!')
-				limpar()
-			}
-		})
-		.catch((err) => {
-			console.error('Erro no cadastro de login\n' + err)
-			alert('Erro no cadastro!')
-		})
-}
+} 
 
 const limpar = () => {
 	let cpf = document.querySelector('#cpfCliente')
