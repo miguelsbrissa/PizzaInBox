@@ -31,11 +31,11 @@ function toggleMenu() {
   }
 }
 
-
+// TODO: bug no envio da pizza, precisa apertar o botão duas vezes
 function addPizza() {
-  location.href = "cadPizza.html"
+  window.location = "/admin/cadastro/pizza?#"
 }
 
 function addPedido() {
-  location.href = "cadPedido.html"
+  window.location = "/admin/cadastro/pedido?#"
 }

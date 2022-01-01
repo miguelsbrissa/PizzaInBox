@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="sass/main.css">
-  <title>PizzaInBox - Login</title>
-</head>
+  <%- include('../partials/header'); %>
 
 <body>
-  <header>
-
-  </header>
   <main>
     <section class="login">
       <h2>Login</h2>
@@ -27,12 +18,12 @@
           <input type="password" name="" id="passLogin" placeholder="********">
         </div>
         <div class="login__add">
-          <a href="cadUsuario.html" >
+          <a href="login/cadastrar/" >
             Não tenho login
           </a>
         </div>
         <div class="login__btn">
-          <input type="submit" value="Entrar" onclick="validateLogin()"> 
+          <input type="submit" value="Entrar" onclick="login()"> 
         </div>
       </div>
      
@@ -47,14 +38,15 @@
           <i class="fab fa-instagram fa-2x"></i>
         </a>
       </div>
-      <footer>&copy; Copyright 2021</footer>
+      <%- include('../partials/footer'); %>
     </section>
   </main>
-
-
   <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/login.js"></script>
+  <script src="/axios/dist/axios.min.js"></script>
+  <script type="module">
+  import login from "/js/login.js"
+    window.login = login
+  </script>
 </body>
 
 </html>

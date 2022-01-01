@@ -14,4 +14,6 @@ A fazer
 
 
 ## Manual do usuário
-A fazer
+Para rodar a página use o comando
+`npm start`
+

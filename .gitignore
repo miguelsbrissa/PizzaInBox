@@ -2,3 +2,5 @@
 .vscode/
 # astash files
 *.lock
+# node modules
+node_modules

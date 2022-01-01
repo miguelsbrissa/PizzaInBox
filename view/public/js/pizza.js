@@ -145,6 +145,7 @@ function remove(pizza){
     }))
     alert(`Pizza removida com sucesso`)
     limpar()
+    
 }
 
 function limpar(){
@@ -155,5 +156,6 @@ function limpar(){
     nome.value = ""
     preco.value = ""
     ing.value = ""
+    location.href = '/admin'
 }
 

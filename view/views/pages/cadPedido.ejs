@@ -10,31 +10,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="menu-btn">
-            <span class="menu-btn__burger"></span>
-        </div>
-
-        <nav class="nav">
-            <ul class="menu-nav">
-                <li class="menu-nav__item active">
-                    <a href="index.html" class="menu-nav__link">
-                        Home
-                    </a>
-                </li>
-                <li class="menu-nav__item ">
-                    <a href="pedidosCli.html" class="menu-nav__link">
-                        Pedidos
-                    </a>
-                </li>
-                <li class="menu-nav__item">
-                    <a href="contact.html" class="menu-nav__link">
-                        Fale conosco
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('../partials/header'); %>
     <main>
         <section class="cadPedido">
 
@@ -63,14 +39,14 @@
                 </a>
 
             </div>
-            <footer>&copy; Copyright 2021</footer>
+            <%- include('../partials/footer'); %>
         </section>
     </main>
 
 
     <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/cadPedido.js"></script>
+    <script src="../../js/cadPedido.js"></script>
 </body>
 
 </html>
