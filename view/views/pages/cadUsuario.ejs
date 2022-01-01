@@ -1,0 +1,121 @@
+<body>
+    <%- include('../partials/header'); %>
+    <main>
+        <section class="cadUsuario">
+            <div class="cadUsuario__bio-image">
+                <h1 class="text-secondary">Registre-se</h1>
+            </div>
+
+            <form action="#">
+                <div class="cadUsuario__form">
+                    <div class="cadUsuario__input-box">
+                        <span class="details">CPF</span>
+                        <input type="text" name="" id="cpfCliente" placeholder="Digite sem CPF">
+                    </div>
+                    <div class="cadUsuario__input-box">
+                        <span class="details">Nome</span>
+                        <input type="text" name="" id="nomeCliente" placeholder="Digite seu nome">
+                    </div>
+                    <div class="cadUsuario__input-box">
+                        <span class="details">Email</span>
+                        <input type="email" name="" id="emailCliente" placeholder="email@email.com">
+                    </div>
+                    <div class="cadUsuario__input-box">
+                        <span class="details">Telefone</span>
+                        <input type="text" name="" id="telCliente" placeholder="11912341234">
+                    </div>
+                    <div class="cadUsuario__input-box">
+                        <span class="details">CEP</span>
+                        <input type="text" name="" id="cepCliente" placeholder="Digite seu CEP">
+                    </div>
+                    <div class="cadUsuario__input-box">
+                        <span class="details">Logradouro</span>
+                        <input type="text" name="" id="logradouroCliente" placeholder="Digite seu logradouro">
+                    </div>
+                    <div class="cadUsuario__input-box">
+                        <span class="details">Numero</span>
+                        <input type="text" name="" id="numeroCliente" placeholder="Digite seu numero">
+                    </div>
+                    <div class="cadUsuario__input-box">
+                        <span class="details">Bairro</span>
+                        <input type="text" name="" id="bairroCliente" placeholder="Digite seu bairro">
+                    </div>
+                    <div class="cadUsuario__input-box">
+                        <span class="details">Complenento</span>
+                        <input type="text" name="" id="complementoCliente" placeholder="Digite seu complenento">
+                    </div>
+                    <div class="cadUsuario__input-box">
+                        <span class="details">Estado</span>
+                        <select id="estadoCliente" name="estado">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                          </select>
+                    </div>
+                    <div class="cadUsuario__input-box">
+                        <span class="details">Cidade</span>
+                        <input type="text" name="" id="cidadeCliente" placeholder="Digite sua cidade">
+                    </div>
+                    <div class="cadUsuario__input-box">
+                        <span class="details">Usuario</span>
+                        <input type="text" name="" id="usuarioCliente" placeholder="Digite seu usuário">
+                    </div>
+                    <div class="cadUsuario__input-box">
+                        <span class="details">Senha</span>
+                        <input type="password" name="" id="senhaCliente" placeholder="***">
+                    </div>
+                    <div class="cadUsuario__input-box">
+                        <span class="details">Confirmar senha</span>
+                        <input type="password" name="" id="confSenhaCliente" placeholder="***">
+                    </div>
+                </div>
+                <div class="cadUsuario__btn">
+                    <input type="submit" value="Cadastrar" onclick="adicionaCliente()">
+                </div>
+            </form>
+            <div class="social-icons">
+                <a href="#!">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="#!">
+                <a href="#!">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <%- include('../partials/footer'); %>
+            </div>
+
+
+    <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+    <script src="/js/main.js"></script>
+		<script src="/axios/dist/axios.min.js"></script>
+    <script type="module">
+        import adicionaCliente from "/js/cadCliente.js"
+        window.adicionaCliente = adicionaCliente
+    </script>
+</body>
+
+</html>

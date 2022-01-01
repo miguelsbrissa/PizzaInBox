@@ -16,4 +16,6 @@ https://pizzainbox.netlify.app/
 ![image](https://user-images.githubusercontent.com/84507810/145814897-eab63b97-3338-4db0-8a99-cd70fc413e77.png)
 
 ## Manual do usuário
-A fazer
+Para rodar a página use o comando
+`npm start`
+

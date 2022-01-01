@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('../partials/headerAdmin'); %>
+<body>
+    <main>
+        <section class="pedidos">
+            <div class="pedidos__bio-image">
+                <h1 class="text-secondary">Pedidos</h1>
+            </div>
+            <div class="pedidos__container">
+                <table class="pedidos__table">
+                    <tr class="pedidos__header">
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Detalhes</th>
+                    </tr>
+                    <tr class="pedidos__content">
+                        <td>1</td>
+                        <td>José</td>
+                        <td>R$150,00</td>
+                        <td>
+                            <a href="#" class="pedidos__btn">
+                                <i class="fas fa-eye"></i> Detalhes
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="pedidos__content">
+                        <td>2</td>
+                        <td>José</td>
+                        <td>R$250,00</td>
+                        <td>
+                            <a href="#" class="pedidos__btn">
+                                <i class="fas fa-eye"></i> Detalhes
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="pedidos__content">
+                        <td>3</td>
+                        <td>Rafaela</td>
+                        <td>R$200,00</td>
+                        <td>
+                            <a href="#" class="pedidos__btn">
+                                <i class="fas fa-eye"></i> Detalhes
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#!">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="#!">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="#!">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+
+            </div>
+            <%- include('../partials/footer'); %>
+        </section>
+    </main>
+
+
+    <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

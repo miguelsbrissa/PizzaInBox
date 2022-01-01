@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <%- include('../partials/headerAdmin'); %>
+    <main>
+        <section class="cadPizza">
+            <div class="cadPizza__bio-image">
+                <h1 class="text-secondary">Cadastro de Pizza</h1>
+            </div>
+
+            <form action="#">
+                <div class="cadPizza__form">
+                    <div class="cadPizza__input-box">
+                        <span class="details">Nome da Pizza</span>
+                        <input type="text" name="" id="nomePizza" placeholder="Nome da pizza">
+                    </div>
+                    <div class="cadPizza__input-box">
+                        <span class="details">Preço</span>
+                        <input type="text" name="" id="precoPizza" placeholder="50.00">
+                    </div>
+                    <div class="cadPizza__input-box">
+                        <span class="details">Ingredientes</span>
+                        <input type="text" name="" id="ingPizza" placeholder="Mussarela, Calabresa...">
+                    </div>
+                    
+                    <div class="cadPizza__btn">
+                        <input type="submit" value="Cadastrar" onclick="adicionaPizza()">
+                    </div>
+                </div>
+            </form>
+            <div class="social-icons">
+                <a href="#!">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="#!">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="#!">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+
+            </div>
+            <%- include('../partials/footer'); %>
+        </section>
+    </main>
+
+
+    <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/axios/dist/axios.min.js"></script>
+    <script type="module">
+    import adicionaPizza from "/js/cadPizza.js"
+    window.adicionaPizza = adicionaPizza
+    </script>
+</body>
+
+</html>
