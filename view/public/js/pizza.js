@@ -1,14 +1,78 @@
-function httpGet(url) {
-    var html = new XMLHttpRequest();
-    html.open("get", url, false)
-    html.send(null)
-    return html.responseText;
-}
+import api from './services/api.js'
 
-function tablePizza() {
-    const table = httpGet("https://pizza-in-box.herokuapp.com/produtos/");
-    var linhas = table.split(",")
-    linhas = JSON.parse(linhas)
+const endpoint = '/produtos'
+
+async function getProdutos() {
+	return api
+	 .get(`${endpoint}`,)
+	 .then((response) => {
+		 if (response.status >= 200 && response.status <= 400) {
+			 console.info(`resposta produtos : `)
+			 console.info(response)
+			 return response.data
+		 }
+	 })
+	 .catch((err) => {
+		 console.error(`Erro no cadastro do usuário\n${err}`)
+	 })
+} 
+
+async function updateProdutoById(id, nome, preco, ingrediente) {
+	 api
+	 .put(`${endpoint}/${id}`, {
+		 id : id,
+		 nome: nome,
+		 preco: preco,
+		 descricao: ingrediente
+	 })
+	 .then((response) => {
+		 if (response.status >= 200 && response.status <= 400) {
+			 console.info(`resposta produto by id : `)
+			 console.info(response)
+			 alert('Pizza atualizada com sucesso')
+			 limpar()
+		 }
+	 })
+	 .catch((err) => {
+		 console.error(`Erro na atualização do produto\n${err}`)
+		 alert('Erro ao salvar o produto.')
+	 })
+} 
+
+async function getProdutoById(id) {
+	return api
+	 .get(`${endpoint}/${id}`,)
+	 .then((response) => {
+		 if (response.status >= 200 && response.status <= 400) {
+			 console.info(`resposta produto by id : `)
+			 console.info(response)
+			 return response.data
+		 }
+	 })
+	 .catch((err) => {
+		 console.error(`Erro no cadastro do usuário\n${err}`)
+	 })
+} 
+async function deleteProdutoById(id) {
+	return api
+	 .delete(`${endpoint}/${id}`,)
+	 .then((response) => {
+		 if (response.status >= 200 && response.status <= 400) {
+			 console.info(`resposta delete produto by id : `)
+			 console.info(response)
+			 alert("Produto deletado com sucesso!")
+			 limpar()
+		 }
+	 })
+	 .catch((err) => {
+		 console.error(`Erro no cadastro do usuário\n${err}`)
+		 alert("Erro na deleçào do produto.")
+	 })
+} 
+
+export async function tablePizza() {
+    const table = await getProdutos()
+    var linhas = table
 
     var btnAdd = document.createElement('div')
     btnAdd.setAttribute('class', 'homeAdmin__button')
@@ -71,11 +135,8 @@ function tablePizza() {
 }
 tablePizza()
 
-function editarPizza(id){
-    var pizza = httpGet(`https://pizza-in-box.herokuapp.com/produtos/${id}`)
-    console.log(pizza)
-
-    pizza = JSON.parse(pizza)
+export async function editarPizza(id){
+    var pizza = await getProdutoById(id)
     console.log(pizza)
 
     var tabela = document.querySelector('#tablePizza')
@@ -113,39 +174,26 @@ function editarPizza(id){
     div.appendChild(divEdit)
 }
 
-function troca(){
+export function voltaTela(){
     var div = document.querySelector('#divEditPizza')
     div.remove()
     tablePizza()
 }
 
-function edit(pizza){
-    var nome = document.querySelector('#nomePizza')
-    var preco = document.querySelector('#precoPizza')
-    var ing = document.querySelector('#ingPizza')
-    var html = new XMLHttpRequest();
-    html.open("put", `https://pizza-in-box.herokuapp.com/produtos/${pizza}`, true)
-    html.setRequestHeader('Content-Type', 'application/json')
-    html.send(JSON.stringify({
-        "id": pizza,
-        "nome": nome.value,
-        "preco": preco.value,
-        "descricao": ing.value
-    }))
-    alert('Pizza atualizada com sucesso')
-    limpar()
+export async function updateProduto(id){
+    var nome = document.querySelector('#nomePizza').value
+    var preco = document.querySelector('#precoPizza').value
+    var descricao = document.querySelector('#ingPizza').value
+		if(preco === ''){
+			alert("Preço não pode ser vazio")
+			return
+		}
+		updateProdutoById(id, nome, preco, descricao)
+ 
 }
 
-function remove(pizza){
-    var html = new XMLHttpRequest();
-    html.open("delete", `https://pizza-in-box.herokuapp.com/produtos/${pizza}`, true)
-    html.setRequestHeader('Content-Type', 'application/json')
-    html.send(JSON.stringify({
-        "id": pizza
-    }))
-    alert(`Pizza removida com sucesso`)
-    limpar()
-    
+export function deleteProduto(id){
+    deleteProdutoById(id)   
 }
 
 function limpar(){
