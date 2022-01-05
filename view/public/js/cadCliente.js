@@ -1,8 +1,6 @@
 import api from './services/api.js'
 
 const endpoint = '/clientes'
-const endpointGetId = `${endpoint}/findByCpf`
-const endpointLogin = '/logins'
 class Cliente {
 	constructor(cpf, nome, email, telefone) {
 		;(this.cpf = cpf),

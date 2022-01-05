@@ -1,25 +1,38 @@
-function httpGet(url) {
-    var html = new XMLHttpRequest();
-    html.open("get", url, false)
-    html.send(null)
-    return html.responseText;
-}
+import api from './services/api.js'
 
-function tableClientes() {
-    const table = httpGet("https://pizza-in-box.herokuapp.com/clientes/");
-    var linhas = table.split(",")
-    linhas = JSON.parse(linhas)
+const endpoint = '/clientes'
 
-    var container = document.querySelector('#containerPizza')
-    var tableHtml = document.createElement("table")
+ async function getUsers() {
+		return api
+			.get(`${endpoint}`)
+			.then((response) => {
+				if (response.status >= 200 && response.status <= 400) {
+					console.info(`resposta getUsers : `)
+					console.info(response)
+					return response.data
+				}
+			})
+			.catch((err) => {
+				console.error(`Erro na busca de usuários \n${err}`)
+			})
+ } 
+
+export const table = async () => {
+    let clientesResponse = await getUsers();
+		clientesResponse = clientesResponse.content
+		console.log("linhas: \n")
+    let  linhas = clientesResponse
+		console.log(linhas)
+    let container = document.querySelector('#containerPizza')
+    let tableHtml = document.createElement("table")
     tableHtml.setAttribute('class', 'conPizza__table')
     tableHtml.setAttribute('id', 'tablePizza')
-    var trH = document.createElement("tr")
+    let trH = document.createElement("tr")
     trH.setAttribute('class', 'conPizza__header')
-    var tdId = document.createElement("td")
-    var tdNome = document.createElement("td")
-    var tdCpf = document.createElement("td")
-    var tdAcao = document.createElement("td")
+    let tdId = document.createElement("td")
+    let tdNome = document.createElement("td")
+    let tdCpf = document.createElement("td")
+    let tdAcao = document.createElement("td")
     tdId.innerHTML = '#'
     tdNome.innerHTML = 'Nome'
     tdCpf.innerHTML = 'CPF'
@@ -30,21 +43,22 @@ function tableClientes() {
     trH.appendChild(tdAcao)
     tableHtml.appendChild(trH)
     container.appendChild(tableHtml)
-    for (var i = 0; i < linhas.content.length; i++) {
-        var tr = document.createElement("tr")
-        var id = document.createElement("td")
-        var nome = document.createElement("td")
-        var cpf = document.createElement("td")
-        var acoes = document.createElement("td")
+		let i = 0
+    for (let linha of linhas) {
+        let tr = document.createElement("tr")
+        let id = document.createElement("td")
+        let nome = document.createElement("td")
+        let cpf = document.createElement("td")
+        let acoes = document.createElement("td")
 
-        tr.setAttribute('id', linhas.content[i].id)
+        tr.setAttribute('id', linha.id)
         tr.setAttribute('class', "pedidos__content")
 
-        id.innerHTML = i + 1
-        nome.innerHTML = linhas.content[i].nome
-        cpf.innerHTML = linhas.content[i].cpfOuCnpj
+        id.innerHTML = i++
+        nome.innerHTML = linha.nome
+        cpf.innerHTML = linha.cpfOuCnpj
         acoes.innerHTML = `
-    <a href="#" class="pedidos__btn" onclick="remove(${linhas.content[i].id})">
+    <a href="#" class="pedidos__btn" onclick="remove(${linha.id})">
     <i class="fas fa-trash"></i> Excluir
 </a>
     `
@@ -56,18 +70,18 @@ function tableClientes() {
         tableHtml.appendChild(tr)
     }
 }
-tableClientes()
+table()
 
-function remove(id){
-    var html = new XMLHttpRequest();
-    html.open("delete", `https://pizza-in-box.herokuapp.com/clientes/${id}`, true)
-    html.setRequestHeader('Content-Type', 'application/json')
-    html.send(JSON.stringify({
-        "id": id
-    }))
-    alert(`Cliente removido com sucesso`)
+export async function remove(id){
+	api.delete(`${endpoint}/${id}`, ).then((response) => {
+	if (response.status >= 200 && response.status <= 400) {
+		location.reload()
+	}
+})
+.catch((err) => {
+		console.error("Erro no login\n" + err);
+		alert("Erro na exclusão de cliente!");
+ });
 
-    location.reload()
+    
 }
-
-

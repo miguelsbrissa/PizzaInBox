@@ -1,35 +1,46 @@
-function httpGet(url) {
-    var html = new XMLHttpRequest();
-    html.open("get", url, false)
-    html.send(null)
-    return html.responseText;
-}
+import api from './services/api.js'
+const endpoint = '/produtos'
 
-function tablePizzas() {
+async function getPedidos() {
+	return api
+	 .get(`${endpoint}`,)
+	 .then((response) => {
+		 if (response.status >= 200 && response.status <= 400) {
+			 console.info(`resposta pedidos : `)
+			 console.info(response)
+			 return response.data.content
+		 }
+	 })
+	 .catch((err) => {
+		 console.error(`Erro na busca de pedidos!\n${err}`)
+		 alert("Os pedidos não puderam ser exibidos!")
+	 })
+} 
+
+export async function tablePizzas() {
     var divF = document.querySelector('#formPedido')
-    const table = httpGet("https://pizza-in-box.herokuapp.com/produtos/");
-    var linhas = table.split(",")
-    linhas = JSON.parse(linhas)
+    const table = await getPedidos()
+    var linhas = table
 
     var tableHtml = document.createElement("table")
     tableHtml.setAttribute('class', 'cadPedido__table')
     tableHtml.setAttribute('id', 'tablePizza')
     divF.appendChild(tableHtml)
-    for (const i of Object.keys(linhas.content)) {
+    for (const linha of linhas) {
         var tr = document.createElement("tr")
         var nome = document.createElement("td")
         var preco = document.createElement("td")
         var ing = document.createElement("td")
         var acoes = document.createElement("td")
 
-        tr.setAttribute('id', linhas.content[i].id)
+        tr.setAttribute('id', linha.id)
         tr.setAttribute('class', "cadPedido__content")
 
-        nome.innerHTML = linhas.content[i].nome
-        preco.innerHTML = `R$ ${linhas.content[i].preco}`
-        ing.innerHTML = `${linhas.content[i].descricao}`
+        nome.innerHTML = linha.nome
+        preco.innerHTML = `R$ ${linha.preco}`
+        ing.innerHTML = `${linha.descricao}`
         acoes.innerHTML = `
-    <a href="#" class="cadPedido__btn" onclick="cart(${linhas.content[i].id})">
+    <a href="#" class="cadPedido__btn" onclick="cart(${linha.id})">
     <i class="fas fa-eye"></i> Adicionar
 </a>
     `
@@ -58,7 +69,7 @@ function tablePizzas() {
 
 tablePizzas()
 
-function addEndereco() {
+export function addEndereco() {
     var divF = document.querySelector('#formPedido')
     divF.innerHTML = `
     <div class="cadPedido__label">
@@ -106,7 +117,7 @@ function addEndereco() {
     divF.appendChild(btnSelPag)
 }
 
-function addPag() {
+export function addPag() {
     var divF = document.querySelector('#formPedido')
     divF.innerHTML = `
     <div class="cadPedido__label">
@@ -154,11 +165,13 @@ function addPag() {
     divF.appendChild(divBtnFim)
 }
 
-function finalizarPedido(){
+export function finalizarPedido(){
+	alert("Pedido feito com sucesso!")
+	window.location = "/"
 
 }
 
-function togglePagamento() {
+export function togglePagamento() {
     var rdbBol = document.querySelector('#rdbBoleto');
     var rdbCred = document.querySelector('#rdbCredito');
     var boleto = document.querySelector('.cadPagamento__boleto')
@@ -257,6 +270,7 @@ function togglePagamento() {
     }
 }
 
-function cart() {
+export function cart() {
+	console.info("Adicionando carrinho")
 
 }
