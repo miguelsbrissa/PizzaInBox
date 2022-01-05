@@ -1,4 +1,4 @@
 [build]
-base = "/view"
+base = "./view"
 command = "npm run start"
 publish = "./view"
