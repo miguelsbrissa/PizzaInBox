@@ -1,5 +1,5 @@
 const api = axios.create({
-  baseURL: "https://pizza-in-box.herokuapp.com",
+  baseURL: "http://localhost:8080",
 });
 
 export default api;

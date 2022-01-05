@@ -29,8 +29,12 @@
 
 
     <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/clientesAdm.js"></script>
+    <script src="/js/main.js"></script>		
+		<script src="/axios/dist/axios.min.js"></script>
+    <script type="module">
+        import {table, remove} from "/js/clientesAdm.js"
+				window.remove = remove
+    </script>
 </body>
 
 </html>
