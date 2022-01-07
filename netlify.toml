@@ -1,5 +1,4 @@
 [build]
-base = "/view"
-command = "npm i"
-command = "npm run start"
+base = "./view"
+command = "yarn start"
 publish = "./view"

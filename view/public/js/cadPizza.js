@@ -9,9 +9,9 @@ const adicionaPizza = async function addPizza() {
 	var descricao = document.querySelector('#ingPizza')
 	await api
 		.post(`${endpoint}`, {
-			nome: nome.value,
-			preco: preco.value,
-			descricao: descricao.value,
+			name: nome.value,
+			price: preco.value,
+			description: descricao.value,
 		})
 		.then((response) => {
 			if (response.status >= 200 && response.status <= 400) {

@@ -28,7 +28,13 @@
 
     <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/js/pizza.js"></script>
+		<script type="module">
+			import {tablePizza, editarPizza, updateProduto, voltaTela, deleteProduto} from "/js/pizza.js"
+			window.editarPizza = editarPizza
+			window.edit = updateProduto
+			window.troca = voltaTela
+			window.remove = deleteProduto
+		</script>
 </body>
 
 </html>
