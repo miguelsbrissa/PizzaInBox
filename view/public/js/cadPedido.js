@@ -36,9 +36,9 @@ export async function tablePizzas() {
         tr.setAttribute('id', linha.id)
         tr.setAttribute('class', "cadPedido__content")
 
-        nome.innerHTML = linha.nome
-        preco.innerHTML = `R$ ${linha.preco}`
-        ing.innerHTML = `${linha.descricao}`
+        nome.innerHTML = linha.name
+        preco.innerHTML = `R$ ${linha.price}`
+        ing.innerHTML = `${linha.description}`
         acoes.innerHTML = `
     <a href="#" class="cadPedido__btn" onclick="cart(${linha.id})">
     <i class="fas fa-eye"></i> Adicionar
