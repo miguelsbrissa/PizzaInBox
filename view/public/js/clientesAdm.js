@@ -55,8 +55,8 @@ export const table = async () => {
         tr.setAttribute('class', "pedidos__content")
 
         id.innerHTML = i++
-        nome.innerHTML = linha.nome
-        cpf.innerHTML = linha.cpfOuCnpj
+        nome.innerHTML = linha.name
+        cpf.innerHTML = linha.document
         acoes.innerHTML = `
     <a href="#" class="pedidos__btn" onclick="remove(${linha.id})">
     <i class="fas fa-trash"></i> Excluir

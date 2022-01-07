@@ -21,9 +21,9 @@ async function updateProdutoById(id, nome, preco, ingrediente) {
 	 api
 	 .put(`${endpoint}/${id}`, {
 		 id : id,
-		 nome: nome,
-		 preco: preco,
-		 descricao: ingrediente
+		 name: nome,
+		 price: preco,
+		 description: ingrediente
 	 })
 	 .then((response) => {
 		 if (response.status >= 200 && response.status <= 400) {
@@ -116,9 +116,9 @@ export async function tablePizza() {
         tr.setAttribute('class', "pedidos__content")
 
         id.innerHTML = i + 1
-        nome.innerHTML = linhas.content[i].nome
-        preco.innerHTML = `R$ ${linhas.content[i].preco}`
-        ing.innerHTML = `${linhas.content[i].descricao}`
+        nome.innerHTML = linhas.content[i].name
+        preco.innerHTML = `R$ ${linhas.content[i].price}`
+        ing.innerHTML = `${linhas.content[i].description}`
         acoes.innerHTML = `
     <a href="#" class="pedidos__btn" onclick="editarPizza(${linhas.content[i].id})">
     <i class="fas fa-eye"></i> Editar
@@ -150,15 +150,15 @@ export async function editarPizza(id){
     divEdit.innerHTML = `
                     <div class="cadPizza__input-box">
                         <span class="details">Nome da Pizza</span>
-                        <input type="text" name="" id="nomePizza" placeholder="Nome da pizza" value="${pizza.nome}">
+                        <input type="text" name="" id="nomePizza" placeholder="Nome da pizza" value="${pizza.name}">
                     </div>
                     <div class="cadPizza__input-box">
                         <span class="details">Preço</span>
-                        <input type="text" name="" id="precoPizza" placeholder="50.00" value = "${pizza.preco}">
+                        <input type="text" name="" id="precoPizza" placeholder="50.00" value = "${pizza.price}">
                     </div>
                     <div class="cadPizza__input-box">
                         <span class="details">Ingredientes</span>
-                        <input type="text" name="" id="ingPizza" placeholder="Mussarela, Calabresa..." value = "${pizza.descricao}">
+                        <input type="text" name="" id="ingPizza" placeholder="Mussarela, Calabresa..." value = "${pizza.description}">
                     </div>
                     <div class="cadPizza__btn">
                         <input type="submit" value="Atualizar" onclick = "edit(${id})">
